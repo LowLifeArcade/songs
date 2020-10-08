@@ -1,0 +1,23 @@
+Redux notes
+
+exporting and importing
+
+if it's a named export {}
+if it's default no currly braces 
+
+EVERYTHING WILL LOOK LIKE THIS
+
+import React, { Component } from 'react';
+import { connect } from 'react-redux'; // <-- import connect 
+
+class SongList extends Component { // <-- create component 
+  render() {
+    return <div>SongList</div>
+  }
+}
+
+const mapStateToProps = (state) => { // <-- mapStateToProps by convention 
+  return { songs: state.songs }; // <-- return object inside of component 
+};
+
+export default connect(mapStateToProps)(SongList); <-- use connect keyword and in second argument put component 
