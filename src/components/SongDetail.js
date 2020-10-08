@@ -20,5 +20,6 @@ const SongDetail = ({ song }) => {
 const mapStateToProps = (state) => {
   return { song: state.selectedSong }
 };
+// random
 
 export default connect(mapStateToProps)(SongDetail);
